@@ -21,15 +21,20 @@ public class Controller {
 
     @GetMapping("add")
     public void add(){
-        dao.add(new Recipe("1","2",new ArrayList<>()));
+
+        ArrayList<Ingredient> list=new ArrayList<>();
+        list.add(new Ingredient("Kart",122));
+        list.add(new Ingredient("Mart",222));
+
+        dao.add(new Recipe("Hash","Nash",list));
     }
     @GetMapping("Search")
     public String show(@RequestParam String id){
-        return dao.search("1").toString();
+        return dao.search("Hash").toString();
     }
 
     @GetMapping("delete")
     public void delete(@RequestParam String id){
-        dao.delete("1");
+        dao.delete("Hash");
     }
 }
