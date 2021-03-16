@@ -1,6 +1,6 @@
 package com.example.demo.api;
 
-import com.example.demo.Recipe;
+import com.example.demo.Model.Recipe;
 
 public interface Dao {
     void add(Recipe recipe);

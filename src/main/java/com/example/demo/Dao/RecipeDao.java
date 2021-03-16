@@ -1,9 +1,9 @@
-package com.example.demo;
+package com.example.demo.Dao;
 
+import com.example.demo.Model.Recipe;
 import com.example.demo.api.Dao;
 import com.example.demo.api.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

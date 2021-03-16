@@ -1,6 +1,6 @@
 package com.example.demo.api;
 
-import com.example.demo.Recipe;
+import com.example.demo.Model.Recipe;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

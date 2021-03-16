@@ -1,11 +1,10 @@
-package com.example.demo;
+package com.example.demo.Controllers;
 
+import com.example.demo.Model.Ingredient;
+import com.example.demo.Model.Recipe;
 import com.example.demo.api.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -21,20 +20,19 @@ public class Controller {
 
     @GetMapping("add")
     public void add(){
-
         ArrayList<Ingredient> list=new ArrayList<>();
         list.add(new Ingredient("Kart",122));
         list.add(new Ingredient("Mart",222));
 
-        dao.add(new Recipe("Hash","Nash",list));
+            dao.add(new Recipe("Hash","Nash",list));
     }
-    @GetMapping("Search")
-    public String show(@RequestParam String id){
+    @GetMapping("get")
+    public String show(){
         return dao.search("Hash").toString();
     }
 
     @GetMapping("delete")
-    public void delete(@RequestParam String id){
+    public void delete(){
         dao.delete("Hash");
     }
 }
